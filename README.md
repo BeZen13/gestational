@@ -5,4 +5,7 @@ tasks
 tips
 numbers tracker
 dietary API call for info
+Blog for building a community of pregnant women with potential gestational diabetes
 ......
+
+
