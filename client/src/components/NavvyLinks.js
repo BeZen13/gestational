@@ -15,7 +15,7 @@ const LinkWrap  = styled.div`
     align-items: center;
 `
 
-export default withRouter(NavBarLinks(props)){
+ function NavvyLinks(props){
     const { token, logout } = useContext(UserContext)
 
     return(
@@ -30,3 +30,4 @@ export default withRouter(NavBarLinks(props)){
         </LinkWrap>
     )
 }
+export default withRouter(NavvyLinks)
