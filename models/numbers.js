@@ -3,13 +3,33 @@ const Schema = mongoose.Schema
 
 
 const numbersSchema = new Schema({
-    name: {
-        type: String,
-        required: true
-    },
-    level: {
+    aonec: {
         type: Number,
-        require: true
+        required: false
+    },
+    glucose: {
+        type: Number,
+        required: false
+    },
+    carbs: {
+        type: Number,
+        required: false
+    },
+    wight: {
+        type: Number,
+        required: false
+    },
+    bloodpressure:{
+        type: Number,
+        required: false
+    },
+    calories:{
+        type: Number,
+        required: false
+    },
+    insulin:{
+        type: Time,
+        required: falkse
     },
     dateEntered: {
         type: Date,
