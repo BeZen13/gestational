@@ -15,7 +15,7 @@ const numbersSchema = new Schema({
         type: Number,
         required: false
     },
-    wight: {
+    weight: {
         type: Number,
         required: false
     },
@@ -28,8 +28,8 @@ const numbersSchema = new Schema({
         required: false
     },
     insulin:{
-        type: Time,
-        required: falkse
+        type: Date,
+        required: Date.now
     },
     dateEntered: {
         type: Date,
