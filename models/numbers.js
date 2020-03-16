@@ -5,27 +5,31 @@ const Schema = mongoose.Schema
 const numbersSchema = new Schema({
     aonec: {
         type: Number,
-        required: false
+        required: true
     },
     glucose: {
         type: Number,
-        required: false
+        required: true
     },
     carbs: {
         type: Number,
-        required: false
+        required: true
     },
     weight: {
         type: Number,
-        required: false
+        required: true
     },
-    bloodpressure:{
+    systolic:{
         type: Number,
-        required: false
+        required: true
+    },
+    diastolic: {
+        type: Number,
+        required: true
     },
     calories:{
         type: Number,
-        required: false
+        required: true
     },
     insulin:{
         type: Date,
