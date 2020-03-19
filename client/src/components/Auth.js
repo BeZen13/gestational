@@ -45,7 +45,7 @@ export default function Auth(){
         display: flex;
         flex-direction: column;
         align-items: center;
-        paddin 100 0 400px 0;
+        padding: 100 0 400px 0;
     `
 
     return(
