@@ -26,7 +26,7 @@ mongoose.connect(
 //endpoints
 app.use('/auth', require('./routes/authRouter'))
 app.use('/api', expressJwt({ secret: process.env.SECRET })) //req.user
-app.use('/api/numbers', require('./routes/numberRouter.js'))//routes from the levels
+app.use('/api/numbers', require('./routes/numberRouter.js'))//routes for the levels
 
 //more to come
 
