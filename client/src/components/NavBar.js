@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 import bloody from '../assets/BloodLove.jpg'
 import NavvyLinks from '../components/NavvyLinks.js'
-import { NLink } from './styledcomponents/NLink.js'
+import { NLink } from './styledComponents/NLink.js'
 
 const NavBarContainer = styled.div`
     display: flex;

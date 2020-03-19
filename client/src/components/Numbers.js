@@ -16,5 +16,7 @@ const NumbersWrapper = styled.div`
 
 export default function Leads(props){
     const { deleteNumbers } = useContext(UserContext)
-    
+    return(
+        
+    )
 }

@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 import { useInput } from '../hooks/useInput.js'
 
-const initNumbersInputs ={
+/*const initNumbersInputs ={
     aonec: "",
     glucose: "",
     carbs: "",
@@ -10,7 +10,7 @@ const initNumbersInputs ={
     systolic : "",
     diastolic: "",
     calories: "",
-}
+}*/
 
 const FormWrapperNum = styled.div`
     display: flex;
