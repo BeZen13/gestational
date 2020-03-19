@@ -14,7 +14,7 @@ const userSchema = new Schema({
         required: true,
     },
     memberSince: {
-        typed: Date,
+        type: Date,
         default: Date.now
     },
     isAdmin: {

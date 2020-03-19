@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-export default UserContext = React.createContext()
+export const UserContext = React.createContext()
 
 const userAxios = axios.create()
 
@@ -19,9 +19,9 @@ export default function UserProvider(props){
         errMsg: ""
     }
 
-    cosnt [ userState, setUserState ] = useState(initState)
+    const [ userState, setUserState ] = useState(initState)
 
-    function signup(credential){
+    function signup(credentials){
         axios.post("/auth/signup", credentials)
             .then(  res => {
                 const { user, token } = res.data
@@ -40,7 +40,7 @@ export default function UserProvider(props){
         axios.post("/auth/login", credentials)
             .then(res => {
                 const { user, token } = res.data
-                localStoratge.setItem("token", token)
+                localStorage.setItem("token", token)
                 localStorage.setItem("user", JSON.stringify(user))
                 getUserNumbers()
                 setUserState(prevUserState => ({
@@ -91,7 +91,7 @@ export default function UserProvider(props){
     }
 
     function addNumbers(newNumbers){
-        userAxios.post("api/numbers", newLead)
+        userAxios.post("api/numbers", newNumbers)
             .then(res => {
                 setUserState(prevState => ({
                     ...prevState,

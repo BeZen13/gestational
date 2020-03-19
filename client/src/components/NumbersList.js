@@ -1,6 +1,7 @@
 import React, { useEffect, useContext } from 'react'
 import { UserContext } from '../context/UserProvider.js'
 import Numbers from './Numbers.js'
+import styled from 'styled-components'
 
 const NumbersListWrapper = styled.div`
     display: flex;

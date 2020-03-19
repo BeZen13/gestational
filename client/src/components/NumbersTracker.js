@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { UserContext } from '../context/UserProvider'
 import NumbersForm from './NumbersForm.js'
-import NumbersList from  './NumberList.js'
+import NumbersList from  './NumbersList.js'
 import styled from 'styled-components'
 
 //data layout component

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
-import { useInput } from '../hooks/useInput.js' 
+import { useInput } from '../hooks/useInput.js'
 
 const initNumbersInputs ={
     aonec: "",
@@ -29,16 +29,17 @@ export default function NumbersForm(props){
     const { value: carbs, bind: bindCarbs } = useInput("")
     const { value: weight, bind: bindWeight } = useInput("")
     const { value: systolic, bind: bindSystolic } = useInput("")
-    const { value: diastolic, bind: bindSDiastolic } = useInput("")
+    const { value: diastolic, bind: bindDiastolic } = useInput("")
     const { value: calories, bind: bindCalories } = useInput("")
+
+    const { addNumbers } = props
 
     function handleSubmit(e){
         e.preventDefault()
-        addNumbers(inputs)
-        setInputs(initNumbersInputs)
+        addNumbers({ aonec, glucose, carbs, weight, systolic, diastolic, calories })
     }
 
-    const { aonec, glucose, carbs, weight, systolic, diastolic, calories } = inputs
+
 
     return(
         <FormWrapperNum onSubmit={handleSubmit}>

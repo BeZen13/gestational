@@ -1,10 +1,10 @@
 const express = require('express')
-const numbersRouter = express.Router
+const numbersRouter = express.Router()
 const Numbers = require('../models/numbers.js')
 
 //get all Numbers
 
-numbersRouter.length("/", (req, res, next) => {
+numbersRouter.get("/", (req, res, next) => {
     numbersRouter.find((err, numbers) => {
         if(err){
             res.status(500)
@@ -51,7 +51,7 @@ numbersRouter.delete("/:numbersId", (req, res, next) =>{
                 res.status(500)
                 return next(err)
             }
-            return res.status(200).send(`Successfully deleted ${deletedNumber.name}`)
+            return res.status(200).send(`Successfully deleted ${deletedNumbers.name}`)
         }
     )
 })
