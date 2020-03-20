@@ -20,14 +20,14 @@ export default function Auth(){
         }))
     }
 
-    function handleLogin(e){
-        e.preventDefault()
-        login(inputs)
-    }
-
     function handleSignup(e){
         e.preventDefault()
         signup(inputs)
+    }
+
+    function handleLogin(e){
+        e.preventDefault()
+        login(inputs)
     }
 
     function toggleForm(){
@@ -38,7 +38,14 @@ export default function Auth(){
     //auth styling inputs
 
     const AuthWrap = styled.div`
-
+        width: 350px;
+        height: auto;
+        margin: 10px 10px 10px 30px;
+        box-shadow: 5px 5px 15px #000000;
+        background-color: rgb(236, 236, 236, 0.75);
+        overflow: hidden
+        justify-content: center;
+        align-content: center;
     `;
 
     const WelcomeMsg = styled.div`
@@ -51,29 +58,29 @@ export default function Auth(){
     return(
         <AuthWrap>
             <WelcomeMsg>
-                <h2>Welcome!</h2>
+                <h2>Welcome to One Blood!</h2>
             </WelcomeMsg>
            { !toggle ?
                <>
                     <AuthForm  
                         handleChange={ handleChange }
                         handleSubmit={ handleSignup }
-                        inputs={ inputs }
+                        inputs={inputs}
                         btnText="Sign Up"
                         errMsg={errMsg}
                     />
-                    <p  onClick={toggleForm}>Already a Member?</p> 
+                    <p style={{textAlign: "center"}} onClick={toggleForm}>Already a Member?</p> 
                 </> 
             :
                 <>
                     <AuthForm
                         handleChange={ handleChange }
                         handleSubmit={ handleLogin }
-                        inputs={ inputs }
+                        inputs={inputs}
                         btnText="Login"
                         errMsg={errMsg}
                     />
-                    <p onClick={toggleForm}>Not a Member Yet?</p>
+                    <p style={{textAlign: "center"}} onClick={toggleForm}>Not a Member Yet?</p>
                 </> 
             }       
         </AuthWrap>

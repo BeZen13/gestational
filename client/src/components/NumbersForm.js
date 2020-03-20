@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
-import { useInput } from '../hooks/useInput.js'
 
-/*const initNumbersInputs ={
+
+const initNumbersInputs ={
     aonec: "",
     glucose: "",
     carbs: "",
@@ -10,7 +10,7 @@ import { useInput } from '../hooks/useInput.js'
     systolic : "",
     diastolic: "",
     calories: "",
-}*/
+}
 
 const FormWrapperNum = styled.div`
     display: flex;
@@ -24,21 +24,24 @@ const FormWrapperNum = styled.div`
 
 
 export default function NumbersForm(props){
-    const { value: aonec, bind: bindAOneC } = useInput("")
-    const { value: glucose, bind: bindGlucose } = useInput("")
-    const { value: carbs, bind: bindCarbs } = useInput("")
-    const { value: weight, bind: bindWeight } = useInput("")
-    const { value: systolic, bind: bindSystolic } = useInput("")
-    const { value: diastolic, bind: bindDiastolic } = useInput("")
-    const { value: calories, bind: bindCalories } = useInput("")
-
+    const [ inputs, setInputs ] = useState(initNumbersInputs)
     const { addNumbers } = props
 
+    function handleChange(e){
+        const { name, value } = e.target
+        setInputs(prevInputs => ({
+            ...prevInputs,
+            [name]: value
+        }))
+    }
+    
     function handleSubmit(e){
         e.preventDefault()
-        addNumbers({ aonec, glucose, carbs, weight, systolic, diastolic, calories })
+        addNumbers(inputs)
+        setInputs(initNumbersInputs)
     }
 
+        const { aonec, glucose, carbs, weight, calories, systolic, diastolic } = inputs
 
 
     return(
@@ -48,7 +51,7 @@ export default function NumbersForm(props){
                 name="aonec"
                 value={aonec}
                 placeholder="A 1 C"
-                {...bindAOneC}
+                
                 required
             />
             <input
@@ -56,7 +59,7 @@ export default function NumbersForm(props){
                 name="glucose"
                 value={glucose}
                 placeholder="Glucose lvl"
-                {...bindGlucose}
+                
                 required
             />
             <input
@@ -64,7 +67,7 @@ export default function NumbersForm(props){
                 name="carbs"
                 value={carbs}
                 placeholder="Carbs of meals"
-                {...bindCarbs}
+                
                 required
             />
             <input
@@ -72,7 +75,7 @@ export default function NumbersForm(props){
                 name="weight"
                 value={weight}
                 placeholder="Weight lbs"
-                {...bindWeight}
+               
                 required
             />
             <input
@@ -80,7 +83,7 @@ export default function NumbersForm(props){
                 name="Calories"
                 value={calories}
                 placeholder="Calories ingested"
-                {...bindCalories}
+                
                 required
             />    
             <input
@@ -88,7 +91,7 @@ export default function NumbersForm(props){
                 name="systolic"
                 value={systolic}
                 placeholder="Systolic BP"
-                {...bindSystolic}
+                
                 required     
             />
             <input
@@ -96,7 +99,7 @@ export default function NumbersForm(props){
                 name="diastolic"
                 value={diastolic}
                 placeholder="Diastolic BP"
-                {...bindDiastolic}
+                
                 required
             />
             <button>Enter Info</button>  

@@ -16,17 +16,13 @@ const LinkWrap  = styled.div`
 `
 
  function NavvyLinks(props){
-    const { token, logout } = useContext(UserContext)
+    const { logout } = useContext(UserContext)
 
     return(
         <LinkWrap>
             <NLink to="/Home">Home</NLink>
             <NLink to="/Numbers">Levels DB</NLink>
-            { token ? (
-                <NLink to="/" onClick={ logout }>
-                    Logout
-                </NLink>
-            ) : null }
+            <NLink to="/" onClick={ logout }>Logout</NLink>
         </LinkWrap>
     )
 }
