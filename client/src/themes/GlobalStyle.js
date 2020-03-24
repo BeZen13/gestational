@@ -28,6 +28,7 @@ const GlobalStyle= createGlobalStyle`
         background-position: center;
         background-attatchment: scroll;
         background-color: rgb(20 30 34);
+
     }
     * {
         box-sizing: border-box;

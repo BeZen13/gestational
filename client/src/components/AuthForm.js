@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
+import real from '../assets/real.png'
 
 const FormWrap = styled.form`
     display: flex;
+    height: auto;
     flex-direction: column;
-    width: 20%;
+    width: 25%;
     margin: 5vh auto 0 auto;
 `
+
 
 export default function AuthForm(props){
     const {
@@ -21,6 +24,7 @@ export default function AuthForm(props){
     } = props
 
     return(
+    <div>
         <FormWrap onSubmit={handleSubmit}>
             <input
                 type="text"
@@ -36,9 +40,17 @@ export default function AuthForm(props){
                 onChange={handleChange}
                 placeholder="Password"
             />
-            <button>{ btnText }</button> 
-            <p style={{color: "red"}}>{ errMsg }</p>       
+            <button style={{
+                textAlign: "center",
+                marginTop: "5px"
+            }}>{ btnText }</button> 
+            <p style={{
+                color: "red",
+                textAlign: "center"
+            }}>{ errMsg }</p>       
         </FormWrap>
+   
+    </div>    
     )
     
 }

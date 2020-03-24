@@ -27,7 +27,7 @@ export default function App(){
                     token={token}
                 />
                 <ProtectedRoute
-                    path="Home"
+                    path="/Home"
                     component={Home}
                     redirectTo="/"
                     token={token}
