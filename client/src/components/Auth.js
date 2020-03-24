@@ -8,7 +8,10 @@ const initInputs = { username: "", password: "" }
 
 
 const AuthFormWrap = styled.div`
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 100 0 400px 0;
 `
 
 const WelcomeMessage = styled.div`
@@ -45,8 +48,10 @@ export default function Auth(){
     }
 
     return(
-        <div className="auth-container">
-            <h1></h1>
+        <AuthFormWrap>
+            <WelcomMessage>
+                Welcome to One Drop! Plese Login!
+            </WelcomeMessage>    
             { !toggle ?
                 <>
                     <AuthForm
@@ -70,6 +75,6 @@ export default function Auth(){
                     <p onClick={toggleForm}>Not a Member Yet?</p> 
                 </>           
             }
-        </div>
+        </AuthFormWrap>
     )
 }
