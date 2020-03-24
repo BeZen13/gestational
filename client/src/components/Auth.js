@@ -8,14 +8,14 @@ const initInputs = { username: "", password: "" }
 
 
 const AuthFormWrap = styled.div`
+   
+`
+
+const WelcomeMessage = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100 0 400px 0;
-`
-
-const WelcomeMessage = styled.div`
-
 `
 
 export default function Auth(){
