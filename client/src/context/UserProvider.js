@@ -23,7 +23,7 @@ export default function UserProvider(props){
 
     function signup(credentials){
         axios.post("/auth/signup", credentials)
-            .then(  res => {
+            .then(  res => {  console.log(res.data)
                 const { user, token } = res.data
                 localStorage.setItem("token", token)
                 localStorage.setItem("user", JSON.stringify(user))
@@ -38,7 +38,7 @@ export default function UserProvider(props){
 
     function login(credentials){
         axios.post("/auth/login", credentials)
-            .then(res => {
+            .then(res => { console.log(res.data)
                 const { user, token } = res.data
                 localStorage.setItem("token", token)
                 localStorage.setItem("user", JSON.stringify(user))
@@ -66,7 +66,7 @@ export default function UserProvider(props){
     function handleAuthErr(errMsg){
         setUserState(prevUserState => ({
             ...prevUserState,
-            errMsg: ""
+            errMsg
         }))
     }
 

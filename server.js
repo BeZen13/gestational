@@ -25,7 +25,7 @@ mongoose.connect(
 
 app.use('/auth', require('./routes/authRouter.js')) //auth
 app.use('/api', expressJwt({ secret: process.env.SECRET })) //req.user
-app.use('/api/numbers', require('./routes/numbersRouter.js'))//routes for the levels
+app.use('/api/numbers', require('./routes/numbersRouter.js'))//routes for the levels(numbers)
 
 //more to come
 
@@ -39,5 +39,5 @@ app.use((err, req, res,  next) => {
 
 //listen
 app.listen(8888, () => {
-    console.log('The Gestational Diabetes Servers is Poppin! Local port 8888')
+    console.log('The Gestational Diabetes Servers is Poppin! Local port 8000')
 })
