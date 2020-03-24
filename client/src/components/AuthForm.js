@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import real from '../assets/real.png'
+
 
 const FormWrap = styled.form`
     display: flex;

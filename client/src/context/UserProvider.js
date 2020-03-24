@@ -81,7 +81,7 @@ export default function UserProvider(props){
 
     function getUserNumbers(){
         userAxios.get("/api/numbers/user")
-            .then(res => {  HTMLFormControlsCollection.logt(res.data)
+            .then(res => {  console.log(res.data)
                 setUserState(prevState => ({
                     ...prevState,
                     numbers: res.data

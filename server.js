@@ -21,10 +21,9 @@ mongoose.connect(
     () => console.log('You are now connected to the Gestational Diabetes DB')
 )
 
-//downloads?
 
-//endpoints
-app.use('/auth', require('./routes/authRouter'))
+
+app.use('/auth', require('./routes/authRouter.js')) //auth
 app.use('/api', expressJwt({ secret: process.env.SECRET })) //req.user
 app.use('/api/numbers', require('./routes/numbersRouter.js'))//routes for the levels
 

@@ -10,15 +10,11 @@ const initInputs = { username: "", password: "" }
 const PNGWrap = styled.img`
     height: 300px;
     width 450px;
-   
- 
-
     margin: 0 10px 10px 30px;
     margin-left: 400px
 `
 
 const AuthFormWrap = styled.div`
-    
     background-color: rgb(52, 67, 31 );
     align-content: center;
     text-align: center;
@@ -39,7 +35,7 @@ const WelcomeMessage = styled.div`
     font-size: 20px;
 `
 
-export default function Auth(){
+export default function Auth(props){
     const [ inputs, setInputs ] = useState(initInputs)
     const [ toggle, setToggle ] = useState(false)
 
@@ -77,8 +73,8 @@ export default function Auth(){
                 { !toggle ?
                     <>
                         <AuthForm
-                            handleChange={ handleChange }
-                            handleSubmit={ handleSignup }
+                            handleChange={handleChange}
+                            handleSubmit={handleSignup}
                             inputs={inputs}
                             btnText="Sign Up"
                             errMsg={errMsg}
@@ -90,8 +86,8 @@ export default function Auth(){
                 :
                     <>
                         <AuthForm 
-                            handleChange={ handleChange }
-                            handleSubmit={ handleLogin }
+                            handleChange={handleChange}
+                            handleSubmit={handleLogin}
                             inputs={inputs}
                             btnText="Login"
                             errMsg={errMsg}
