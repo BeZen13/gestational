@@ -26,6 +26,7 @@ const AuthFormWrap = styled.div`
     width: 25%;
     height: auto;
     box-shadow: 5px 5px 15px #000000;
+    overflow: hidden;
 `
 
 const WelcomeMessage = styled.div`
