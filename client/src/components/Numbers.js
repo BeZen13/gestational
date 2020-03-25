@@ -17,4 +17,17 @@ const NumbersWrapper = styled.div`
 export default function Leads(props){
     const { deleteNumbers } = useContext(UserContext)
     
+    const { aonec, glucose, carbs, weight, calories, systolic, diastolic, _id} = props
+
+    return(
+        <NumbersWrapper>
+            <h1>A1C: {aonec}</h1>
+            <h1>Glucose: {glucose}</h1>
+            <h1>Carbs: {carbs}</h1>
+            <h1>Weight: {weight}</h1>
+            <h1>Calories of last meal: {calories}</h1>
+            <h1>BloodPressuer: {systolic}/{diastolic}</h1>
+            <button onClick={() => deleteNumbers(_id)}>Delete</button>
+        </NumbersWrapper>
+    )
 }

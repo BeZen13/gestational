@@ -51,7 +51,7 @@ export default function NumbersForm(props){
                 name="aonec"
                 value={aonec}
                 placeholder="A 1 C"
-                
+                onChange={handleChange}
                 required
             />
             <input
@@ -59,7 +59,7 @@ export default function NumbersForm(props){
                 name="glucose"
                 value={glucose}
                 placeholder="Glucose lvl"
-                
+                onChange={handleChange}
                 required
             />
             <input
@@ -67,7 +67,7 @@ export default function NumbersForm(props){
                 name="carbs"
                 value={carbs}
                 placeholder="Carbs of meals"
-                
+                onChange={handleChange}
                 required
             />
             <input
@@ -75,7 +75,7 @@ export default function NumbersForm(props){
                 name="weight"
                 value={weight}
                 placeholder="Weight lbs"
-               
+                onChange={handleChange}
                 required
             />
             <input
@@ -83,7 +83,7 @@ export default function NumbersForm(props){
                 name="Calories"
                 value={calories}
                 placeholder="Calories ingested"
-                
+                onChange={handleChange}
                 required
             />    
             <input
@@ -99,7 +99,7 @@ export default function NumbersForm(props){
                 name="diastolic"
                 value={diastolic}
                 placeholder="Diastolic BP"
-                
+                onChange={handleChange}
                 required
             />
             <button>Enter Info</button>  

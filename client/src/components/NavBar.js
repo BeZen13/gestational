@@ -29,9 +29,8 @@ const HeaderLogoLink = styled(NLink)`
 `
 
 const HeaderLogo = styled.img`
-    max-height: 75px;
-    width: auto;
-    height: auto;
+    width: 100px;
+    height: 100px;
 `
 
 export default function NavBar(props){

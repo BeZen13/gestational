@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const NLink = styled(Link)`
-    color: #286653;
+    color: crimson;
     text-decoration: none;
     margin: 5px;
     box-sizing: content-box;
+    font-weight: 900;
+    font-size: 25px;
 
     :hover{
         border-bottom: 1px solid #000000;

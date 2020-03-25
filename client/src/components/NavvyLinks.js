@@ -21,7 +21,8 @@ const LinkWrap  = styled.div`
     return(
         <LinkWrap>
             <NLink to="/Home">Home</NLink>
-            <NLink to="/Numbers">Levels DB</NLink>
+            <NLink to="/NumbersTracker">Levels DB</NLink>
+            <NLink to="/Blog">Blog</NLink>
             <NLink to="/" onClick={ logout }>Logout</NLink>
         </LinkWrap>
     )
