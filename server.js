@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(morgan('dev'))
 
 mongoose.connect(
-    'mongoose://localhost:27017/gestational',
+    'mongodb://localhost:27017/gestational',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
