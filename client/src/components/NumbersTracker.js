@@ -33,7 +33,7 @@ export default function NumbersTracker(props){
 
     return(
         <NumbersTrackerWrapper>
-            <WelcomeMessage>Welcome ${username.name}!</WelcomeMessage>
+            <WelcomeMessage>Welcome @{username}!</WelcomeMessage>
             <h3>Lets Keep your Levels Organized!</h3>
             <NumbersForm addNumbers={addNumbers}/>
             <h3>Your Levels</h3>

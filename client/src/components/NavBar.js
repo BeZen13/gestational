@@ -16,6 +16,7 @@ const NavBarContainer = styled.div`
     top: 0;
     left: 0;
     right: 0;
+    box-shadow: 5px 5px 15px #000000;
 `
 
 const Header = styled.div`
@@ -31,6 +32,7 @@ const HeaderLogoLink = styled(NLink)`
 const HeaderLogo = styled.img`
     width: 100px;
     height: 100px;
+    box-shadow: 5px 5px 15px #000000;
 `
 
 export default function NavBar(props){

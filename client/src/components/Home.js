@@ -5,14 +5,12 @@ import gest from '../assets/gest.PNG'
 
 
 const IMGWrap = styled.img`
+    display: flex;
     height: 400px;
     width 575px;
     margin: 0 10px 10px 30px;
     margin-left: 25%;
     margin-top: 40px;  
-`
-const RecipeWrapper = styled.div`
-
 `
 
 export default function Home(){
