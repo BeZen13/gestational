@@ -13,13 +13,14 @@ const initNumbersInputs ={
 }
 
 const FormWrapperNum = styled.div`
-    display: flex;
+    display: inline-block;
     width: auto;
     height: auto;
     margin: 0 10px 10px 30px;
     box-shadow: 5px 5px 15px #000000;
     background-color: rgb(236, 236, 236, 0.75);
     overflow: hidden;
+    align-content: center;
 `
 
 
@@ -80,7 +81,7 @@ export default function NumbersForm(props){
             />
             <input
                 type="number"
-                name="Calories"
+                name="calories"
                 value={calories}
                 placeholder="Calories ingested"
                 onChange={handleChange}
@@ -91,7 +92,7 @@ export default function NumbersForm(props){
                 name="systolic"
                 value={systolic}
                 placeholder="Systolic BP"
-                
+                onChange={handleChange}
                 required     
             />
             <input

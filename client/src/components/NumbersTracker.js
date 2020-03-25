@@ -7,19 +7,25 @@ import styled from 'styled-components'
 //data layout component
 
 const NumbersTrackerWrapper = styled.div`
-    display: flex;
+    display: block;
     width: auto;
     height: auto;
-    margin: 0 10px 10px 30px;
+    margin: 10px 10px 10px 30px;
+    margin-left: auto;
     box-shadow: 5px 5px 15px #000000;
     background-color: rgb(236, 236, 236, 0.75);
     overflow: hidden;
+    text-align: center;
+    margin-top: 25px;
+    justify-content: center;
+    
 `
 const WelcomeMessage = styled.div`
-    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100 0 400px 0;
+    font-size: 20px;
+    font-weight: 800;
 `
 
 export default function NumbersTracker(props){
