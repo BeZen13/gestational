@@ -40,6 +40,7 @@ export default function NumbersForm(props){
         e.preventDefault()
         addNumbers(inputs)
         setInputs(initNumbersInputs)
+        console.log("this is happening")
     }
 
         const { aonec, glucose, carbs, weight, calories, systolic, diastolic } = inputs
@@ -53,7 +54,7 @@ export default function NumbersForm(props){
                 value={aonec}
                 placeholder="A 1 C"
                 onChange={handleChange}
-                required
+               
             />
             <input
                 type="number"
@@ -61,7 +62,7 @@ export default function NumbersForm(props){
                 value={glucose}
                 placeholder="Glucose lvl"
                 onChange={handleChange}
-                required
+               
             />
             <input
                 type="number"
@@ -69,7 +70,7 @@ export default function NumbersForm(props){
                 value={carbs}
                 placeholder="Carbs of meals"
                 onChange={handleChange}
-                required
+               
             />
             <input
                 type="number"
@@ -77,7 +78,7 @@ export default function NumbersForm(props){
                 value={weight}
                 placeholder="Weight lbs"
                 onChange={handleChange}
-                required
+            
             />
             <input
                 type="number"
@@ -85,7 +86,7 @@ export default function NumbersForm(props){
                 value={calories}
                 placeholder="Calories ingested"
                 onChange={handleChange}
-                required
+                
             />    
             <input
                 type="number"
@@ -93,7 +94,7 @@ export default function NumbersForm(props){
                 value={systolic}
                 placeholder="Systolic BP"
                 onChange={handleChange}
-                required     
+                   
             />
             <input
                 type="number"
@@ -101,7 +102,7 @@ export default function NumbersForm(props){
                 value={diastolic}
                 placeholder="Diastolic BP"
                 onChange={handleChange}
-                required
+            
             />
             <button>Enter Info</button>  
 
