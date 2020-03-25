@@ -15,7 +15,7 @@ const PNGWrap = styled.img`
 `
 
 const AuthFormWrap = styled.div`
-    background-color: rgb(52, 67, 31 );
+    background-color: rgb(59, 88, 84);
     align-content: center;
     text-align: center;
     margin-left: 30px;
@@ -33,6 +33,7 @@ const WelcomeMessage = styled.div`
     margin-top: 50px;
     color: crimson;
     font-size: 20px;
+    font-weight: 800;
 `
 
 export default function Auth(props){
@@ -68,7 +69,7 @@ export default function Auth(props){
         <div>
             <AuthFormWrap>
                 <WelcomeMessage>
-                    Welcome to One Drop! Plese Login!
+                    Welcome to One Drop! Please Login!
                 </WelcomeMessage>    
                 { !toggle ?
                     <>
@@ -80,7 +81,8 @@ export default function Auth(props){
                             errMsg={errMsg}
                         />
                         <p onClick={toggleForm} style={{
-                            color: "crimson"
+                            color: "crimson",
+                            fontWeight: "800"
                         }}>Already a Member?</p>
                     </>
                 :
@@ -93,7 +95,8 @@ export default function Auth(props){
                             errMsg={errMsg}
                         />
                         <p onClick={toggleForm} style={{
-                            color: "crimson"
+                            color: "crimson",
+                            fontWeight: "800"
                         }}>Not a Member Yet?</p> 
                     </>           
                 }
