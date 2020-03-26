@@ -1,10 +1,11 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import UserContext from '../context/UserProvider.js'
 
 
 const NumbersWrapper = styled.div`
     display: flex;
+    flex-direction: column;
     width: auto;
     height: auto;
     margin: 0 10px 10px 30px;
@@ -14,7 +15,7 @@ const NumbersWrapper = styled.div`
 `
 
 
-export default function Leads(props){
+export default function Numbers(props){
     const { deleteNumbers } = useContext(UserContext)
     
     const { aonec, glucose, carbs, weight, calories, systolic, diastolic, _id} = props
