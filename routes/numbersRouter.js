@@ -20,7 +20,7 @@ numbersRouter.get("/user", (req, res, next) =>{
     console.log(req.user._id)
     Numbers.find({ user: req.user._id }, (err, numbers) =>{
         if(err){
-            res.statut(500)
+            res.status(500)
             return next(err)
         }
         return res.status(200).send(numbers)
@@ -30,7 +30,7 @@ numbersRouter.get("/user", (req, res, next) =>{
 //add new numbers
 
 numbersRouter.post("/", (req, res, next) =>{
-    res.body.user = req.user._id
+    req.body.user = req.user._id
     const newNumbers = new Numbers(req.body)
     newNumbers.save((err, savedNumbers) =>{
         if(err){

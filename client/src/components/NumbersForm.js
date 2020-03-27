@@ -12,7 +12,7 @@ const initNumbersInputs ={
     calories: "",
 }
 
-const FormWrapperNum = styled.div`
+const FormWrapperNum = styled.form`
     display: inline-block;
     width: auto;
     height: auto;

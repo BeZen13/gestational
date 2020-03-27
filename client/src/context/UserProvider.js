@@ -80,7 +80,7 @@ export default function UserProvider(props){
     //numbers context info:
 
     function getUserNumbers(){
-        userAxios.get("/api/numbers/user")
+        userAxios.get("/api/number/user")
             .then(res => {  console.log(res.data)
                 setUserState(prevState => ({
                     ...prevState,
@@ -90,8 +90,8 @@ export default function UserProvider(props){
             .catch(err => console.log(err))
     }
 
-    function addNumbers(newNumbers){
-        userAxios.post("api/numbers", newNumbers)
+    function addNumbers(newNumber){
+        userAxios.post("api/number", newNumber)
             .then(res => {
                 setUserState(prevState => ({
                     ...prevState,
@@ -103,7 +103,7 @@ export default function UserProvider(props){
 
     function deleteNumbers(_id){
         console.log(_id)
-        userAxios.delete(`/api/numbers/${_id}`)
+        userAxios.delete(`/api/number/${_id}`)
             .then(res => {
                 getUserNumbers()
             })

@@ -31,10 +31,6 @@ const numbersSchema = new Schema({
         type: Number,
         required: false
     },
-    insulin:{
-        type: Date,
-        required: Date.now
-    },
     dateEntered: {
         type: Date,
         defualt: Date.now
