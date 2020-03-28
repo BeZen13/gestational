@@ -38,9 +38,9 @@ export default function NumbersForm(props){
     
     function handleSubmit(e){
         e.preventDefault()
-        addNumbers(inputs)
-        setInputs(initNumbersInputs)
-        console.log("this is happening")
+        addNumbers(inputs) //this is working, but where does it go?
+        setInputs(initNumbersInputs) //this works
+        console.log("this is happening") // finally working
     }
 
         const { aonec, glucose, carbs, weight, calories, systolic, diastolic } = inputs
