@@ -25,7 +25,7 @@ const GraphWrapper = styled.div`
     overflow: hidden; 
 `
 
-const PageHolder = styled.div `
+const PageHolder = styled.div`
 
 `
 
@@ -37,7 +37,7 @@ export default function Numbers(props){
 
     return(
         <PageHolder>
-            <NumbersWrapper> //not displaying yet, but pushing to DB success!
+            <NumbersWrapper> 
                 <h1>A1C: {aonec}</h1>
                 <h1>Glucose: {glucose}</h1>
                 <h1>Carbs: {carbs}</h1>
@@ -46,7 +46,7 @@ export default function Numbers(props){
                 <h1>BloodPressuer: {systolic}/{diastolic}</h1>
                 <button onClick={() => deleteNumbers(_id)}>Delete</button>
             </NumbersWrapper>
-            <GraphWrapper> //this may need to be played with a bit
+            <GraphWrapper> 
                 <VictoryChart
                     theme={VictoryTheme.material}
                 >
@@ -56,7 +56,7 @@ export default function Numbers(props){
                         parent: { border: "1px solid #ccc"}
                         }}
                         data={[
-                            {x: {Time}, y: {aonec}}
+                            {x: 1, y: {aonec}}
                         ]}
                         animate={{
                             duration: 2000,

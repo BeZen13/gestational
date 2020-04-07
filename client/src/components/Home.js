@@ -5,7 +5,7 @@ import gest from '../assets/gest.PNG'
 
 
 const IMGWrap = styled.img`
-    display: flex;
+    display: inline-block;
     height: auto;
     width auto;
     margin: 0 10px 10px 30px;
