@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import styled from 'styled-components'
 
 //eventually will be a page to get low glycemic recipes/meal plan
 
@@ -10,3 +11,6 @@ import axios from 'axios'
 
 //health tips(home remedies for decreasing fasting glucose, 2hr glucose(check for real names))
 
+export default function Resources(){
+    
+}
