@@ -31,6 +31,7 @@ const PageHolder = styled.div`
 
 
 export default function Numbers(props){
+    console.log(UserContext)
     const { deleteNumbers } = useContext(UserContext)
     
     const { aonec, glucose, carbs, weight, calories, systolic, diastolic, _id} = props
