@@ -4,3 +4,6 @@ import styled from 'styled-components'
 
 //blog on 
 
+export default function Blog(){
+    
+}
