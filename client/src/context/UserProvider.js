@@ -109,7 +109,7 @@ export default function UserProvider(props){
             })
             .catch(err => console.log(err.response.data.errMsg))
     }
-
+    
     return(
         <UserContext.Provider
             value={{

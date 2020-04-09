@@ -51,7 +51,7 @@ numbersRouter.delete("/:numbersId", (req, res, next) =>{
                 res.status(500)
                 return next(err)
             }
-            return res.status(200).send(`Successfully deleted ${deletedNumbers.name}`)
+            return res.status(200).send(`Successfully deleted: ${deletedNumbers._id}`)
         }
     )
 })
