@@ -8,10 +8,11 @@ import real from '../assets/real.png'
 const initInputs = { username: "", password: "" }
 
 const PNGWrap = styled.img`
-    height: 300px;
-    width 450px;
+    display: flex;
+    height: 100%;
+    width 100%;
     margin: 0 10px 10px 30px;
-    margin-left: 400px
+    margin-left: auto
 `
 
 const AuthFormWrap = styled.div`
