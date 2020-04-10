@@ -45,7 +45,7 @@ export default function Numbers(props){
                 <h1>Carbs: {carbs}</h1>
                 <h1>Weight: {weight}</h1>
                 <h1>Calories of last meal: {calories}</h1>
-                <h1>BloodPressuer: {systolic}/{diastolic}</h1>
+                <h1>BloodPressure: {systolic}/{diastolic}</h1>
                 
             </NumbersWrapper>
             <GraphWrapper> 
