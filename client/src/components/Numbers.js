@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
 import UserContext from '../context/UserProvider.js'
-import { VictoryLine, VictoryTheme, VictoryChart, VictorAxis } from 'victory'
+import { VictoryLine, VictoryTheme, VictoryChart, VictoryAxis } from 'victory'
 
 
 const NumbersWrapper = styled.div`
@@ -31,10 +31,10 @@ const PageHolder = styled.div`
 
 
 export default function Numbers(props){
+    console.log(useContext(UserContext))
     console.log(UserContext)
-   
-    //const { deleteNumbers } = useContext(UserContext)
-    
+    const { deleteNumbers } = useContext(UserContext)
+
     const { aonec, glucose, carbs, weight, calories, systolic, diastolic, _id} = props
 
     return(
@@ -46,7 +46,7 @@ export default function Numbers(props){
                 <h1>Weight: {weight}</h1>
                 <h1>Calories of last meal: {calories}</h1>
                 <h1>BloodPressure: {systolic}/{diastolic}</h1>
-                
+                <button onClick={() => deleteNumbers(_id)}>Delete</button>
             </NumbersWrapper>
             <GraphWrapper> 
                 <VictoryChart
