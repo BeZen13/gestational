@@ -1,6 +1,6 @@
 import React, { useContext } from 'react'
 import styled from 'styled-components'
-import UserContext from '../context/UserProvider.js'
+import { UserContext } from '../context/UserProvider.js'
 import { VictoryLine, VictoryTheme, VictoryChart, VictoryAxis } from 'victory'
 
 
