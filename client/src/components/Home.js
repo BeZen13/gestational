@@ -13,6 +13,8 @@ const IMGWrap = styled.img`
     margin-top: 40px;
       
 `
+//axios call to Diabetes fact of the Day?
+//Also some links to credible Diabetes Data?
 
 export default function Home(){
     return(
