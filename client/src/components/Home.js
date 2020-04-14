@@ -16,6 +16,8 @@ const IMGWrap = styled.img`
 //axios call to Diabetes fact of the Day?
 //Also some links to credible Diabetes Data?
 
+const userAxios = axios
+
 export default function Home(){
     return(
         <div>
