@@ -14,8 +14,14 @@ const PostWrapper = styled.div`
 const ImgWrapper = styled.img`
 
 `
+const initBlogPost = {
+    postBody = "",
+    upVote = "",
+    commnents = ""
+}
 
 export default function Blog(){
     const { user: { username } } = useContext(UserContext)
 
+    const [ blogs, setBlogs ] = useState(initBlogPost)
 }
