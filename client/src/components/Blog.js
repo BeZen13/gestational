@@ -5,12 +5,9 @@ import styled from 'styled-components'
 
 //blog on 
 
-const BlogWrapper = styled.div`
+const BlogWrapper = styled.form`
 
 `
-const PostWrapper = styled.div`
-
-` 
 const ImgWrapper = styled.img`
 
 `
